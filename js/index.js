@@ -27,7 +27,7 @@ const bookList = books.docs;
                 <img src="https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg" class="card-img-top"  alt="">
                 <div class="card-body">
                     <p class="fw-bold">${book.title}</p>
-                    <p>by ${book.author_alternative_name}</p>
+                    <p>by ${book.author_name ? book.author_name.slice(0,1) : 'Author Name not Available'}</p>
                     <p id="publish">First published in ${book.first_publish_year}</p>
                     <p>Publisher: ${book.publisher}</p>
                 </div>
